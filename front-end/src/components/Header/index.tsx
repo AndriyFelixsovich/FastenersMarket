@@ -1,20 +1,24 @@
 import { FC } from 'react';
 import styled from 'styled-components';
 import Container from '@/components/Ui/Container';
-import Navigation from '@/components/Header/components/Navigation';
+import Logo from '@/components/Shared/Logo';
 import styles from './index.module.scss';
 
 const Header:FC = () => {
   return (
-		<header>
+		<HeaderStyled>
 			<Container>
-				<h2>Header</h2>
-				
-				<Navigation />
+				<Logo />
+			
 
 			</Container>
-		</header>
+		</HeaderStyled>
   );
 }
 
 export default Header;
+
+
+const HeaderStyled = styled.header `
+	background: #fffaf6;
+`;

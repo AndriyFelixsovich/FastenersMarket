@@ -13,8 +13,8 @@ const Container:FC<IProps> = props => {
 
 export default Container;
 
-const ContainerStyled = styled.div<{ maxWidth?: number | string }>`
-	max-width: ${({ maxWidth }) => maxWidth || '1320px'};
+const ContainerStyled = styled.div`
+	max-width: 1500px;
 	padding: 0 .75rem;
 	margin: 0 auto;
 `;
