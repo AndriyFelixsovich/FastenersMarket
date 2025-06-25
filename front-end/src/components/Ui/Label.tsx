@@ -7,9 +7,9 @@ interface IProps {
   value?: string | number;     
 }
 
-const Label: FC<IProps> = ({ children, htmlFor, value, ...rest }) => {
+const Label: FC<IProps> = ({ children, htmlFor, value, ...props }) => {
   return (
-    <LabelStyled htmlFor={String(htmlFor)} {...rest}>
+    <LabelStyled htmlFor={String(htmlFor)} {...props}>
       {children ?? value}
     </LabelStyled>
   );
