@@ -5,7 +5,7 @@ import Heart from '@/components/Icons/Heart';
 const WishlistNavLink:FC = () => {
   return (
 		<Link to="wishlist">
-			<Heart width={30} height={30} />
+			<Heart width={35} height={35} />
 		</Link>
   );
 }

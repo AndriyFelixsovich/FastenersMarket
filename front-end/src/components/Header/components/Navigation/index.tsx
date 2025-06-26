@@ -1,11 +1,12 @@
 import { FC } from 'react';
 import { Link } from "react-router-dom";
+import styled from 'styled-components';
 import NAVIGATION_ROUTES from "./consts";
 
 const Navigation:FC = () => {
 
   return (
-    <nav>
+    <Nav>
       <ul>
         {
           NAVIGATION_ROUTES.map((route, index) => (
@@ -17,8 +18,24 @@ const Navigation:FC = () => {
           ))
         }
       </ul>
-    </nav>
+    </Nav>
   );
 };
 
 export default Navigation;
+
+const Nav = styled.nav `
+	ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 1rem;
+    margin: 0;
+    justify-content: center;
+    a {
+      text-decoration: none;
+      color: var(--black);
+      font-weight: 500;
+    }
+  }
+`;

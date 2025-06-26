@@ -5,7 +5,7 @@ import Cart from '@/components/Icons/Cart';
 const CartNavLink:FC = () => {
   return (
 		<Link to="shopping-cart">
-			<Cart width={30} height={30} />
+			<Cart width={35} height={35} />
 		</Link>
   );
 }

@@ -7,10 +7,12 @@ import Logo from '@/components/Shared/Logo';
 import WishlistNavLink from '@/components/Header/components/WishlistNavLink';
 import UserNavLink from '@/components/Header/components/UserNavLink';
 import CartNavLink from '@/components/Header/components/CartNavLink';
-import Navigation from './components/Navigation';
+import Navigation from '@/components/Header/components/Navigation/index';
+import HeaderTotal from '@/components/Shared/HeaderTotal/index';
 
 
 const Header:FC = () => {
+
   return (
 		<HeaderStyled>
 			<Container>
@@ -18,8 +20,17 @@ const Header:FC = () => {
 				<HeaderWrap>
 					<Logo />
 					<Toolbar>
-						<WishlistNavLink />
-						<CartNavLink />
+
+						<HeaderTotalWrap>
+							<WishlistNavLink />
+							<HeaderTotal />
+						</HeaderTotalWrap>
+
+						<HeaderTotalWrap>
+							<CartNavLink />
+							<HeaderTotal />
+						</HeaderTotalWrap>
+
 						<UserNavLink />
 					</Toolbar>
 				</HeaderWrap>
@@ -35,7 +46,7 @@ export default Header;
 
 
 const HeaderStyled = styled.header `
-	background: #fffaf6;
+	background: var(--snow);
 `;
 
 const HeaderWrap = styled.div `
@@ -46,5 +57,10 @@ const HeaderWrap = styled.div `
 
 const Toolbar = styled.div `
 	display: flex;
-	gap: 1.5rem;
+	gap: 1.7rem;
+`;
+
+const HeaderTotalWrap = styled.div `
+	display: flex;
+  position: relative;
 `;

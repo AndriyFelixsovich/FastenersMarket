@@ -7,7 +7,6 @@ import Page404 from '@/pages/Page404';
 import Wishlist from '@/pages/Wishlist';
 import ShoppingCart from '@/pages/ShoppingCart';
 
-
 const App:FC = () => {
 
 	const routes = [

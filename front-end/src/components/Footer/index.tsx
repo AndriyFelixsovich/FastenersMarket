@@ -33,6 +33,6 @@ const FooterWrap = styled.div`
   align-items: center;
 
   strong {
-    font-size: 2.2rem;
+    font-size: 1.5rem;
   }
 `;

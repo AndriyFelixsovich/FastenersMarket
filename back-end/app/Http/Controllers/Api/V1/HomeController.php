@@ -9,6 +9,6 @@ class HomeController extends Controller
 {
     public function index()
     {
-       dd(5555);
+        return response()->json(['message' => '55555']);
     }
 }

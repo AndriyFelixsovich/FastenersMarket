@@ -5,7 +5,7 @@ import User from '@/components/Icons/User';
 const UserNavLink:FC = () => {
   return (
 		<Link to="account">
-			<User width={30} height={30} />
+			<User width={35} height={35} />
 		</Link>
   );
 }
