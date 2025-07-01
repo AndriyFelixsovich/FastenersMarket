@@ -1,8 +1,8 @@
 import { FC } from 'react';
-import Container from '@/components/Ui/Container';
-import Logo from '@/components/Shared/Logo';
 import styled from 'styled-components';
 import styles from './index.module.scss';
+import Container from '@/components/Ui/Container';
+import Logo from '@/components/Shared/Logo';
 
 const Footer:FC = () => {
   return (

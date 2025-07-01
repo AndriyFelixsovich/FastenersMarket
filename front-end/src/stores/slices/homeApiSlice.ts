@@ -13,4 +13,4 @@ export const homeApiSlice = createApi({
   }),
 });
 
-export const useGetHomePageQuery = homeApiSlice.endpoints.getHomePage.useQuery;
+export const { useGetHomePageQuery } = homeApiSlice;

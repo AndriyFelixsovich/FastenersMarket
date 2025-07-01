@@ -13,14 +13,14 @@ export default HeaderTotal;
 const TotalQuntity = styled.div `
     color: var(--white);
     border-radius: 50%;
-    background: var(--black);
+    background: var(--space-cadet);
     display: flex;
     width: 1.3rem;
-    height: 1.3rem;
+    height: 1.37rem;
     font-size: 1rem;
     text-align: center;
     justify-content: center;
 		position: absolute;
-    right: -9px;
-    top: -7px;
+    right: -10px;
+    top: -8px;
 `;
