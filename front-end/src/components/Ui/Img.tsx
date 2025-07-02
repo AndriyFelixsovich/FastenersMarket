@@ -1,6 +1,6 @@
-import { FC, ImgHTMLAttributes } from 'react';
+import { FC } from 'react';
 
-interface IProps extends ImgHTMLAttributes<HTMLImageElement> {
+interface IProps {
 	width: string | number;
 	height: string | number;
 	src: string;

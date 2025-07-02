@@ -7,6 +7,7 @@ const CategoryItem:FC = () => {
   return (
 		<CategoryItemStyled>
 			<IMG width={100} height={100} src="src/assets/images/home-img.webp" loading="lazy" />
+      <Title to="#">Audi</Title>  
 		</CategoryItemStyled>
   );
 }
@@ -23,4 +24,14 @@ const CategoryItemStyled = styled.div`
     cursor: pointer;
     box-shadow: 13px 13px 17px 2px rgba(0,0,0,0.75);
   }
+`;
+
+const Title = styled(Link)`
+  font-weight: 500;
+  text-align: center;
+  text-decoration: none;
+  color: var(--black);
+  display: block;
+  font-size: 1.2rem;
+  margin-top: .7rem;
 `;

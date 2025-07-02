@@ -4,6 +4,7 @@ import styled from 'styled-components';
 interface IProps {
 	children: React.ReactNode;
 	ariaLabel?: string;
+	onClick: () => void;
 }
 
 const Button:FC<IProps> = ({ ariaLabel = 'button', ...props }) => {
