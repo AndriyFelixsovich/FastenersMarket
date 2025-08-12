@@ -1,4 +1,4 @@
-import { FC, useState } from 'react';
+import { useState } from 'react';
 
 const useAddToWishlist = () => {
   const [wishlistData, setWishlistData] = useState([]);
@@ -11,7 +11,7 @@ const useAddToWishlist = () => {
     console.log('remove')
   }
 
-  return {wishlistData, setWishlistData, addToWishlist, removeFromWishlist}
+  return {wishlistData, addToWishlist, removeFromWishlist}
 
 }
 

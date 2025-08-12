@@ -35,9 +35,8 @@ const Header:FC = () => {
 					</Toolbar>
 				</HeaderWrap>
 
-				<Navigation />
-
 			</Container>
+			<Navigation />
 		</HeaderStyled>
   );
 }
@@ -46,7 +45,7 @@ export default Header;
 
 
 const HeaderStyled = styled.header `
-	background: var(--snow);
+	background: #d5d5d5;
 `;
 
 const HeaderWrap = styled.div `

@@ -1,4 +1,4 @@
-import { FC, useState } from 'react';
+import { useState } from 'react';
 
 const useAddToCart = () => {
   const [cartData, setCartData] = useState([]);
@@ -11,7 +11,7 @@ const useAddToCart = () => {
     console.log('remove')
   }
 
-  return {cartData, setCartData, addToCart, removeFromCart}
+  return {cartData, addToCart, removeFromCart}
 
 }
 

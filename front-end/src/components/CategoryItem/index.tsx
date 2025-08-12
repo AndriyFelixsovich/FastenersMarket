@@ -6,7 +6,7 @@ import IMG from '@/components/Ui/Img';
 const CategoryItem:FC = () => {
   return (
 		<CategoryItemStyled>
-			<IMG width={100} height={100} src="src/assets/images/home-img.webp" loading="lazy" />
+			<IMG width={100} height={100} src="src/assets/images/home-img.webp" />
       <Title to="#">Audi</Title>  
 		</CategoryItemStyled>
   );

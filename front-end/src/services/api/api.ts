@@ -1,1 +1,0 @@
-export const API_BASE = 'https://fastenersmarket.local/api/v1/';

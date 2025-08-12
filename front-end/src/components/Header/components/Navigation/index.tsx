@@ -25,6 +25,7 @@ const Navigation:FC = () => {
 export default Navigation;
 
 const Nav = styled.nav `
+  background: #355360;
 	ul {
     list-style: none;
     padding: 0;
@@ -34,7 +35,7 @@ const Nav = styled.nav `
     justify-content: center;
     a {
       text-decoration: none;
-      color: var(--black);
+      color: var(--white);
       font-weight: 500;
     }
   }
