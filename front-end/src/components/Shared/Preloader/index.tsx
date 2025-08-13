@@ -15,7 +15,7 @@ const PreloaderWrap = styled.div `
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background: var(--snow);
+	background: #fffaf6;
 	display: flex;
   justify-content: center;
   align-items: center

@@ -11,9 +11,9 @@ const HeaderTotal:FC = () => {
 export default HeaderTotal;
 
 const TotalQuntity = styled.div `
-    color: var(--white);
+    color: #fff;
     border-radius: 50%;
-    background: var(--space-cadet);
+    background: #1C274C;
     display: flex;
     width: 1.3rem;
     height: 1.37rem;

@@ -20,7 +20,7 @@ const TextareaStyled = styled.textarea`
 	width: 100%;
 	margin: .7rem 0;
 	padding: .3rem;
-	border: 1px solid var(--light-grey);
+	border: 1px solid lightblue;
 	border-radius: 0;
 	box-sizing: border-box;
 `;

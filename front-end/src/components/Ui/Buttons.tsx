@@ -20,12 +20,12 @@ const ButtonStyled = styled.button `
 	font-family: inherit;
 	margin: .7rem 0;
 	border-radius: 0;
-	color: var(--black);
-	border: 1px solid var(--light-grey);
+	color: #000;
+	border: 1px solid lightblue;
 	cursor: pointer;
 
 	&:disabled[disabled] {
-		color: var(--black);
+		color: #000;
 		border-radius: 0;
 		cursor: not-allowed;
 	}
