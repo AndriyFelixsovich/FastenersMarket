@@ -20,6 +20,7 @@ class CategoryResource extends JsonResource
             'level'     => $this->level,
             'parent_id' => $this->parent_id,
             'slug'      => $this->slug,
+            'full_slug' => $this->full_slug,
         ];
 
         if ($this->children->isNotEmpty()) {

@@ -20,7 +20,7 @@ class HomeController extends Controller
         $markaAutoAll = MarkaAuto::where('status', '=', '1')->get();
         return response()->json([
             'category' => CategoryResource::collection($categories),
-            'markaAutoAll' => MarkaAutoResource::collection($markaAutoAll)
+            'markaAutoAll' => MarkaAutoResource::collection($markaAutoAll),200
         ]);
     }
 }

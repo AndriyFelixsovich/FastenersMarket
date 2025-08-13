@@ -9,7 +9,7 @@ class CategoryService
     public function getCategoryMenuTree($parent_id = 0)
     {
         return FastenersCategories::where('parent_id',$parent_id)
-            ->with('children')
+            ->with(['parent', 'childrenRecursive'])
             ->get();
     }
 
