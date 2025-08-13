@@ -3,14 +3,26 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import IMG from '@/components/Ui/Img';
 
-const CategoryItem:FC = () => {
-  return (
-		<CategoryItemStyled>
-			<IMG width={100} height={100} src="src/assets/images/home-img.webp" />
-      <Title to="#">Audi</Title>  
-		</CategoryItemStyled>
-  );
+interface Marka {
+  name: string;
+  id: number;
+  slug: string;
 }
+
+interface CategoryItemProps {
+  autoMarka: Marka;
+}
+
+const CategoryItem: FC<CategoryItemProps> = ({ autoMarka }) => {
+  return (
+    <CategoryItemStyled>
+      <TitleLink to={autoMarka.slug}>
+        <IMG width={100} height={100} src="src/assets/images/home-img.webp" />
+      </TitleLink>
+      <TitleLink to={autoMarka.slug}>{autoMarka.name}</TitleLink>
+    </CategoryItemStyled>
+  );
+};
 
 export default CategoryItem;
 
@@ -26,7 +38,7 @@ const CategoryItemStyled = styled.div`
   }
 `;
 
-const Title = styled(Link)`
+const TitleLink = styled(Link)`
   font-weight: 500;
   text-align: center;
   text-decoration: none;
@@ -34,4 +46,5 @@ const Title = styled(Link)`
   display: block;
   font-size: 1.2rem;
   margin-top: .7rem;
+  text-transform: capitalize;
 `;

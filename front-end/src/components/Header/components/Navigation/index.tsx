@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import styled from 'styled-components';
 import axios from 'axios';
 
-
 interface Category {
   name: string;
   id: number;
@@ -34,12 +33,20 @@ const Navigation:FC = () => {
       {navRouts.map((route) => (
         <li key={route.id}>
           <Link to={route.slug}>{route.name}</Link>
-
           {route.children && route.children.length > 0 && (
             <ul className='dropdown'>
               {route.children.map((child) => (
                 <li key={child.id}>
                   <Link to={child.slug}>{child.name}</Link>
+                    {child.children && child.children.length > 0 && (
+                      <ul className='dropdown-two-subchild'>
+                        {child.children.map((subchild) => (
+                          <li key={subchild.id}>
+                            <Link to={subchild.slug}>{subchild.name}</Link>
+                          </li>
+                        ))}
+                      </ul>
+                    )}
                 </li>
               ))}
             </ul>
@@ -87,13 +94,19 @@ const Nav = styled.nav `
     position: absolute;
     top: 44px;
     left: 0;
-    width: fit-content;
+    width: 100%;
     display: flex;
     flex-direction: column;
     background-color: #fff;
     li {
       margin: 0;
       padding: 0;
+      &:hover {
+        .dropdown-two-subchild {
+            opacity: 1;
+            visibility: visible;
+          }
+      }
       a {
         color: #000;
         padding: 7px;
@@ -104,5 +117,16 @@ const Nav = styled.nav `
         }
       }
     }
+  }
+  .dropdown-two-subchild {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    background-color: #fff;
+    width: 70%;
+    opacity: 0;
+    visibility: hidden;
   }
 `;
