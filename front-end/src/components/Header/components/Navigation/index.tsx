@@ -33,17 +33,17 @@ const Navigation:FC = () => {
     <ul>
       {navRouts.map((route) => (
         <li key={route.id}>
-          <Link to={route.full_slug}>{route.name}</Link>
+          <Link to={`/category/${route.slug}`}>{route.name}</Link>
           {route.children && route.children.length > 0 && (
             <ul className='dropdown'>
               {route.children.map((child) => (
                 <li key={child.id}>
-                  <Link to={child.full_slug}>{child.name}</Link>
+                  <Link to={`/category/${child.full_slug}`}>{child.name}</Link>
                     {child.children && child.children.length > 0 && (
                       <ul className='dropdown-two-subchild'>
                         {child.children.map((subchild) => (
                           <li key={subchild.id}>
-                            <Link to={subchild.full_slug}>{subchild.name}</Link>
+                            <Link to={`/category/${subchild.full_slug}`}>{subchild.name}</Link>
                           </li>
                         ))}
                       </ul>
