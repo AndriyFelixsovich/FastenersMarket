@@ -25,7 +25,7 @@ const App:FC = () => {
 						{routes.map(({ path, element }) => (
 							<Route key={path} path={path} element={element} />
 						))}
-						<Route path="/:category" element={<Category />} />
+						<Route path="/:category/:subCategory?/:chilSubCategory?/" element={<Category />} />
 						<Route path="/:product" element={<Product />} />
 						<Route path="*" element={<Page404 />} />
 					</Routes>
