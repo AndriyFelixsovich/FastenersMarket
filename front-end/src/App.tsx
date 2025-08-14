@@ -6,6 +6,8 @@ import HomePage from '@/pages/index';
 import Page404 from '@/pages/Page404';
 import Wishlist from '@/pages/Wishlist';
 import ShoppingCart from '@/pages/ShoppingCart';
+import Category from '@/pages/Category';
+import Product from '@/pages/Product';
 
 const App:FC = () => {
 
@@ -23,6 +25,8 @@ const App:FC = () => {
 						{routes.map(({ path, element }) => (
 							<Route key={path} path={path} element={element} />
 						))}
+						<Route path="/:category" element={<Category />} />
+						<Route path="/:product" element={<Product />} />
 						<Route path="*" element={<Page404 />} />
 					</Routes>
 				</main>
