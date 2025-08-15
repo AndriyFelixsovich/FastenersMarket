@@ -30,12 +30,29 @@ class FastenersCategories extends Model
 
     public function parent()
     {
-        return $this->belongsTo(FastenersCategories::class, 'parent_id');
+        return $this->belongsTo(self::class, 'parent_id');
     }
 
     public function childrenRecursive()
     {
         return $this->children()->with(['parent', 'childrenRecursive']);
     }
+
+    public function products()
+    {
+        return $this->belongsToMany(Product::class, 'product_relation_fasteners_categories', 'category_id', 'product_id');
+    }
+
+    public function getAllMenuId()
+    {
+        $ids = [$this->id];
+
+        foreach ($this->children as $child){
+            $ids = array_merge($ids, $child->getAllMenuId());
+        }
+        return $ids;
+    }
+
+
 
 }

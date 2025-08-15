@@ -14,5 +14,5 @@ Route::prefix('v1')->group(function () {
 });
 
 Route::prefix('v1')->group(function (){
-    Route::get('/getCategory', [CategoryController::class, 'index']);
+    Route::get('/getCategory/{slug}', [CategoryController::class, 'index']);
 });
