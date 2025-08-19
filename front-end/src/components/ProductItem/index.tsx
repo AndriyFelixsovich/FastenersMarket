@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import IMG from '@/components/Ui/Img';
 import QuantityCounter from '../Shared/QuantityCounter';
+import Cart from '@/components/Icons/Cart';
+import Heart from '@/components/Icons/Heart';
 
 const ProductItem:FC = () => {
   return (
@@ -11,11 +13,20 @@ const ProductItem:FC = () => {
         <div>
           <Title to="/">Product</Title>
           <Description>Description</Description>
-          <Controls>
-            <Price>Price $</Price>
+          <Sku>sku</Sku>
+
+          <BlockPrice>
+            <Price>1$</Price>
             <QuantityCounter />
-            <div>Cart</div>
-            <div>Wishlist</div>
+          </BlockPrice>
+          
+          <Controls>
+            <CartButton>
+              <Cart width={29} height={29} />
+            </CartButton>
+            <WislistButton>
+              <Heart width={28} height={28} />
+            </WislistButton>
           </Controls>
         </div>
 		</Wrap>
@@ -25,18 +36,33 @@ const ProductItem:FC = () => {
 export default ProductItem;
 
 const Title = styled(Link) `
-	color: var(--honolulu-blue);
+	color: #0270ac;
   text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
 `;
 
 const Description = styled.p `
-	color: var(--sonic-silver);
+	color: #747474;
+`;
+
+const CartButton = styled.button `
+	cursor: pointer;
+  background: none;
+  border: none;
+`;
+
+const WislistButton = styled.button `
+	cursor: pointer;
+  background: none;
+  border: none;
 `;
 
 const Wrap = styled.div `
 	display: grid;
   gap: 1rem;
-  grid-template-columns: 30% 70%;
+  grid-template-columns: 30% 68%;
+  margin: 1rem 0;
 `;
 
 const Controls = styled.div `
@@ -45,7 +71,20 @@ const Controls = styled.div `
   gap: 1rem;
 `;
 
-const Price = styled.span `
-	color: var(--dark-cerulean);
+const Price = styled.strong `
+	color: #014e70;
+  display: block;
+  margin: .7rem 0;
+`;
+
+const BlockPrice = styled.div `
+	display: flex;
+  gap: 1rem;
+  align-items: center;
+`;
+
+const Sku = styled.span `
+  display: block;
+	color: #747474;
 `;
 

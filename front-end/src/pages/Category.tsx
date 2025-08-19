@@ -1,7 +1,9 @@
 import { FC, useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import Container from '@/components/Ui/Container';
 import axios from 'axios';
+import Container from '@/components/Ui/Container';
+import ProductItem from '@/components/ProductItem';
+
 
 interface CategoryData {
   id: number;
@@ -28,10 +30,11 @@ const Category: FC = () => {
 
     fetchCategoryData();
   }, [slug, lastSlug]);
- 
+
   return (
     <Container>
       <h2>{lastSlug}</h2>
+      <ProductItem />
     </Container>
   );
 };
