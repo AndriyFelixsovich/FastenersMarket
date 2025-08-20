@@ -6,17 +6,31 @@ import QuantityCounter from '../Shared/QuantityCounter';
 import Cart from '@/components/Icons/Cart';
 import Heart from '@/components/Icons/Heart';
 
-const ProductItem:FC = () => {
+interface IProduct {
+  id: number;
+  name: string;
+  description: string;
+  image_path: string;
+  price: number;
+  quantity: number;
+  origin_number: number;
+}
+
+interface IProductData {
+  product: IProduct
+}
+
+const ProductItem:FC<IProductData> = ({ product }) => {
   return (
 		<Wrap>
-			  <IMG width={100} height={100} src="src/assets/images/home-img.webp" />
+			  <IMG width={100} height={100} src={product.image_path} />
         <div>
-          <Title to="/">Product</Title>
-          <Description>Description</Description>
-          <Sku>sku</Sku>
+          <Title to="/">{product.description}</Title>
+          <Description>{product.name}</Description>
+          <Sku>{product.origin_number}</Sku>
 
           <BlockPrice>
-            <Price>1$</Price>
+            <Price>{product.price}$</Price>
             <QuantityCounter />
           </BlockPrice>
           
@@ -62,7 +76,8 @@ const Wrap = styled.div `
 	display: grid;
   gap: 1rem;
   grid-template-columns: 30% 68%;
-  margin: 1rem 0;
+  margin: 1.5rem 0;
+  padding: .5rem;
 `;
 
 const Controls = styled.div `

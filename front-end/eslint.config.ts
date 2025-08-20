@@ -42,7 +42,7 @@ export default [
     rules: {
 			...pluginReact.configs.recommended.rules,
       ...pluginReactHooks.configs.recommended.rules,
-      '@typescript-eslint/explicit-function-return-type': 'warn',
+      '@typescript-eslint/explicit-function-return-type': 'off',
       '@typescript-eslint/no-explicit-any': 'warn',
       '@typescript-eslint/explicit-module-boundary-types': 'warn',
 			'react/react-in-jsx-scope': 'off',

@@ -4,7 +4,7 @@ import useQuantity from '@/hooks/useQuantity';
 import Button from '@/components/Ui/Buttons';
 import Input from '@/components/Ui/Input';
 
-const QuantityCounter = () => {
+const QuantityCounter:FC = () => {
   const {quantity, incrementQuantity, decrementQuantity, setQuantityHandler} = useQuantity();
   
   return (
