@@ -10,7 +10,7 @@ interface IProps {
 
 const Input:FC<IProps> = ({ ariaLabel = 'input', onChange, ...props }) => {
   return (
-    <InputStyled {...props} type="text" aria-label={ariaLabel}  />
+    <InputStyled {...props} type="text" aria-label={ariaLabel} onChange={onChange} />
   );
 }
 

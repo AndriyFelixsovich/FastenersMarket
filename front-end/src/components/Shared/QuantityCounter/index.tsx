@@ -9,11 +9,18 @@ const QuantityCounter = () => {
   
   return (
 		<>
-      <Button onClick={incrementQuantity}>+</Button>
-      <Input type="text" value={quantity} onChange={(e) => setQuantityHandler(e.target.value)}  />
-      <Button onClick={decrementQuantity}>-</Button>
+      <QuantityWrap>
+        <Button onClick={incrementQuantity}>+</Button>
+        <Input type="text" value={quantity} onChange={(e) => setQuantityHandler(e.target.value)}  />
+        <Button onClick={decrementQuantity}>-</Button>
+      </QuantityWrap>
     </>
   );
 }
 
 export default QuantityCounter;
+
+const QuantityWrap = styled.div `
+	display: flex;
+  gap: 1rem;
+`;
