@@ -9,6 +9,13 @@ import ShoppingCart from '@/pages/ShoppingCart';
 import Category from '@/pages/Category';
 import Product from '@/pages/Product';
 import Account from '@/pages/Admin/Account';
+import Contacts from '@/pages/Contacts';
+import About from '@/pages/About';
+import Blog from '@/pages/Blog';
+import PrivacyPolicy from '@/pages/PrivacyPolicy';
+import ReturnRefundPolicy from '@/pages/ReturnRefundPolicy';
+import ShippingPolicy from '@/pages/ShippingPolicy';
+import Service from '@/pages/Service';
 
 const App:FC = () => {
 
@@ -17,6 +24,13 @@ const App:FC = () => {
 		{ path: "wishlist", element: <Wishlist/> },
 		{ path: "shopping-cart", element: <ShoppingCart/> },
 		{ path: "account", element: <Account/> },
+		{ path: "about", element: <About/> },
+		{ path: "contacts", element: <Contacts/> },
+		{ path: "blog", element: <Blog/> },
+		{ path: "privacy-policy", element: <PrivacyPolicy/> },
+		{ path: "return-refund-policy", element: <ReturnRefundPolicy/> },
+		{ path: "shipping-policy", element: <ShippingPolicy/> },
+		{ path: "service", element: <Service/> },
 		{ path: "/category/*", element: <Category/> },
 		{ path: "/:product", element: <Product/> },
 		{ path: "*", element: <Page404/> },
