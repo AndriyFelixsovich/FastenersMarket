@@ -10,7 +10,6 @@ import CartNavLink from '@/components/Header/components/CartNavLink';
 import Navigation from '@/components/Header/components/Navigation/index';
 import HeaderTotal from '@/components/Shared/HeaderTotal/index';
 
-
 const Header:FC = () => {
 
   return (

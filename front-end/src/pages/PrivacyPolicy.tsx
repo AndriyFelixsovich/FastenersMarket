@@ -2,18 +2,17 @@ import { FC, useEffect } from 'react';
 import axios from 'axios';
 import styled from 'styled-components';
 import Container from '@/components/Ui/Container';
-import ProductItem from '@/components/ProductItem';
 
-const ShoppingCart:FC = () => {
+const PrivacyPolicy:FC = () => {
   return (
 		<Container>
-			<Title>Shopping Cart</Title>
+			<Title>Privacy Policy</Title>
 			
 		</Container>
   );
 }
 
-export default ShoppingCart;
+export default PrivacyPolicy;
 
 const Title = styled.h1 `
 	text-align: center;

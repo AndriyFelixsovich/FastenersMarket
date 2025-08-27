@@ -4,7 +4,6 @@ import axios from 'axios';
 import Container from '@/components/Ui/Container';
 import ProductItem from '@/components/ProductItem';
 
-
 interface CategoryData {
   id: number;
   name: string;
@@ -41,10 +40,9 @@ const Category:FC = () => {
   return (
     <Container>
       {
-        loading && <div style={{ margin: '2rem 0', fontWeight: '500', fontSize: '1.2rem', color: '#0270ac' }}>Loading...</div>
-      }
-      {
-        data.map((product, index) => <ProductItem key={product.id + index} product={product} />)
+        loading 
+          ? <div style={{ margin: '2rem 0', fontWeight: '500', fontSize: '1.2rem', color: '#0270ac' }}>Loading...</div>
+          : data.map((product, index) => <ProductItem key={product.id + index} product={product} />)
       }
     </Container>
   );

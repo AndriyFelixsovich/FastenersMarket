@@ -5,6 +5,7 @@ import IMG from '@/components/Ui/Img';
 import QuantityCounter from '../Shared/QuantityCounter';
 import Cart from '@/components/Icons/Cart';
 import Heart from '@/components/Icons/Heart';
+import Close from '@/components/Icons/Close';
 
 interface IProduct {
   id: number;
@@ -17,32 +18,45 @@ interface IProduct {
 }
 
 interface IProductData {
-  product: IProduct
+  product: IProduct;
+  isCloseIcon?: boolean;
 }
 
-const ProductItem:FC<IProductData> = ({ product }) => {
+const ProductItem:FC<IProductData> = ({ product, isCloseIcon = false }) => {
+
   return (
 		<Wrap>
 			  <IMG width={100} height={100} src={product.image_path} />
-        <div>
-          <Title to="/">{product.description}</Title>
-          <Description>{product.name}</Description>
-          <Sku>{product.origin_number}</Sku>
-
+        <DescrBlock>
+          <div>
+            <Title to="/">{product.description}</Title>
+            <Description>{product.name}</Description>
+            <Sku>{product.origin_number}</Sku>
+          </div>
           <BlockPrice>
             <Price>{product.price}$</Price>
             <QuantityCounter />
           </BlockPrice>
-          
           <Controls>
-            <CartButton>
-              <Cart width={29} height={29} />
-            </CartButton>
-            <WislistButton>
+            <IconButton>
               <Heart width={28} height={28} />
-            </WislistButton>
+            </IconButton>
+
+       
+            <IconButton>
+             <Cart width={30} height={30} />
+            </IconButton>
+
+            {
+              isCloseIcon && (
+                <IconButton>
+                  <Close width={30} height={30} />
+                </IconButton>
+              ) 
+            }
+
           </Controls>
-        </div>
+        </DescrBlock>
 		</Wrap>
   );
 }
@@ -60,13 +74,13 @@ const Description = styled.p `
 	color: #747474;
 `;
 
-const CartButton = styled.button `
-	cursor: pointer;
-  background: none;
-  border: none;
+const DescrBlock = styled.div `
+	display: grid;
+  grid-template-columns: 1fr 1fr 12%;
+  grid-column-gap: 1rem;
 `;
 
-const WislistButton = styled.button `
+const IconButton = styled.button `
 	cursor: pointer;
   background: none;
   border: none;
@@ -96,6 +110,7 @@ const BlockPrice = styled.div `
 	display: flex;
   gap: 1rem;
   align-items: center;
+  justify-content: space-around;
 `;
 
 const Sku = styled.span `

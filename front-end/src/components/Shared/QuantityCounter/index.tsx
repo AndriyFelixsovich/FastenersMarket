@@ -23,4 +23,8 @@ export default QuantityCounter;
 const QuantityWrap = styled.div `
 	display: flex;
   gap: 1rem;
+  
+  input {
+    text-align: center;
+  }
 `;
