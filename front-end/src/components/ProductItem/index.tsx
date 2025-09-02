@@ -2,7 +2,7 @@ import { FC } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import IMG from '@/components/Ui/Img';
-import QuantityCounter from '../Shared/QuantityCounter';
+import QuantityCounter from '@/components/Ui/QuantityCounter';
 import Cart from '@/components/Icons/Cart';
 import Heart from '@/components/Icons/Heart';
 import Close from '@/components/Icons/Close';

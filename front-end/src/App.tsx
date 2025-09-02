@@ -17,6 +17,10 @@ import ReturnRefundPolicy from '@/pages/ReturnRefundPolicy';
 import ShippingPolicy from '@/pages/ShippingPolicy';
 import Service from '@/pages/Service';
 
+import CategorySelection from '@/pages/CategorySelection';
+import PhotoSelection from '@/pages/PhotoSelection';
+import SizeSelection from '@/pages/SizeSelection';
+
 const App:FC = () => {
 
 	const routes = [
@@ -33,6 +37,9 @@ const App:FC = () => {
 		{ path: "service", element: <Service/> },
 		{ path: "/category/*", element: <Category/> },
 		{ path: "/:product", element: <Product/> },
+		{ path: "photo-selection", element: <PhotoSelection /> },
+		{ path: "category-selection", element: <CategorySelection /> },
+		{ path: "size-selection", element: <SizeSelection /> },
 		{ path: "*", element: <Page404/> },
 	];
 

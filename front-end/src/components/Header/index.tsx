@@ -1,14 +1,12 @@
 import { FC } from 'react';
 import styled from 'styled-components';
-import styles from './index.module.scss';
-import { Link } from 'react-router-dom';
 import Container from '@/components/Ui/Container';
-import Logo from '@/components/Shared/Logo';
+import Logo from '@/components/Ui/Logo';
 import WishlistNavLink from '@/components/Header/components/WishlistNavLink';
 import UserNavLink from '@/components/Header/components/UserNavLink';
 import CartNavLink from '@/components/Header/components/CartNavLink';
-import Navigation from '@/components/Header/components/Navigation/index';
-import HeaderTotal from '@/components/Shared/HeaderTotal/index';
+import Navigation from '@/components/Header/components/Navigation';
+import HeaderTotal from '@/components/Ui/HeaderTotal';
 
 const Header:FC = () => {
 

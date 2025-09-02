@@ -2,7 +2,7 @@ import { FC } from 'react';
 import { Link } from "react-router-dom";
 import styled from 'styled-components';
 import Container from '@/components/Ui/Container';
-import Logo from '@/components/Shared/Logo';
+import Logo from '@/components/Ui/Logo';
 
 const Footer:FC = () => {
 
