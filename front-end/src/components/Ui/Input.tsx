@@ -2,15 +2,14 @@ import { FC } from 'react';
 import styled from 'styled-components';
 
 interface IProps {
-	ariaLabel?: string;
 	type: string;
 	value: string | number;
 	onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
-const Input:FC<IProps> = ({ ariaLabel = 'input', onChange, ...props }) => {
+const Input:FC<IProps> = ({onChange, ...props }) => {
   return (
-    <InputStyled {...props} type="text" aria-label={ariaLabel} onChange={onChange} />
+    <InputStyled {...props} type="text" onChange={onChange} />
   );
 }
 

@@ -2,13 +2,12 @@ import { FC } from 'react';
 import styled from 'styled-components';
 
 interface IProps {
-	ariaLabel?: string;
 	children: React.ReactNode;
 }
 
-const Select:FC<IProps> = ({ ariaLabel = 'select', ...props }) => {
+const Select:FC<IProps> = ({ ...props }) => {
   return (
-    <SelectStyled {...props} aria-label={ariaLabel} >{ props.children }</SelectStyled>
+    <SelectStyled {...props} >{ props.children }</SelectStyled>
   );
 }
 

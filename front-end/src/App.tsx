@@ -12,6 +12,7 @@ import Account from '@/pages/Admin/Account';
 import Contacts from '@/pages/Contacts';
 import About from '@/pages/About';
 import Blog from '@/pages/Blog';
+import BlogPost from '@/pages/BlogPost';
 import PrivacyPolicy from '@/pages/PrivacyPolicy';
 import ReturnRefundPolicy from '@/pages/ReturnRefundPolicy';
 import ShippingPolicy from '@/pages/ShippingPolicy';
@@ -30,6 +31,7 @@ const App:FC = () => {
 		{ path: "about", element: <About/> },
 		{ path: "contacts", element: <Contacts/> },
 		{ path: "blog", element: <Blog/> },
+		{ path: "post", element: <BlogPost/> },
 		{ path: "privacy-policy", element: <PrivacyPolicy/> },
 		{ path: "return-refund-policy", element: <ReturnRefundPolicy/> },
 		{ path: "shipping-policy", element: <ShippingPolicy/> },

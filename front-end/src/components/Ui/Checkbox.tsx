@@ -1,13 +1,9 @@
 import { FC } from 'react';
 import styled from 'styled-components';
 
-interface IProps {
-  ariaLabel?: string
-}
-
-const Checkbox:FC<IProps> = ({ ariaLabel = 'checkbox', ...props }) => {
+const Checkbox:FC = ({ ...props }) => {
   return (
-    <CheckboxStyled {...props} type="checkbox" aria-label={ariaLabel} />
+    <CheckboxStyled {...props} type="checkbox" />
   );
 }
 

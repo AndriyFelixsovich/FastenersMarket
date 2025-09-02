@@ -2,13 +2,12 @@ import React, { FC } from 'react';
 import styled from 'styled-components';
 
 interface IProps {
-	ariaLabel: string;
 	children: React.ReactNode;
 }
 
-const Textarea:FC<IProps> = ({ ariaLabel = 'textarea', ...props }) => {
+const Textarea:FC<IProps> = ({ ...props }) => {
   return (
-		<TextareaStyled {...props} aria-label={ariaLabel}>{props.children}</TextareaStyled>
+		<TextareaStyled {...props}>{props.children}</TextareaStyled>
   );
 }
 
