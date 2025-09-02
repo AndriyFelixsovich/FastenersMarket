@@ -16,7 +16,6 @@ import PrivacyPolicy from '@/pages/PrivacyPolicy';
 import ReturnRefundPolicy from '@/pages/ReturnRefundPolicy';
 import ShippingPolicy from '@/pages/ShippingPolicy';
 import Service from '@/pages/Service';
-
 import CategorySelection from '@/pages/CategorySelection';
 import PhotoSelection from '@/pages/PhotoSelection';
 import SizeSelection from '@/pages/SizeSelection';

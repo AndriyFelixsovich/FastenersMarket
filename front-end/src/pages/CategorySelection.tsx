@@ -8,6 +8,7 @@ const CategorySelection:FC = () => {
 		<Container>
 			<Title>Category Selection</Title>
 
+
 		</Container>
   );
 }
